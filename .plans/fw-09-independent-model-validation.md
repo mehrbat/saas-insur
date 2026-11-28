@@ -1,0 +1,21 @@
+# FW-9 - Independent actuarial model validation
+
+## Context
+
+Phase 2 G8 placeholder. Plan 05 G5 is the project actuary or analyst's sign-off on model quality and sensitivity. FW-9 proposes an additional pilot release decision informed by an actuary independent of model design, fitting, and G5 sign-off. [Plan 01](01-platform-overview.md#10-future-work-placeholders) · [Plan 05 G5 and G8](05-actuarial-engine-and-simulation.md#24-approval-and-release-gates)
+
+The risk bearer and legal specialist identify any applicable Australian prudential and professional standards. APRA CPS 320 sets the actuarial advice framework for insurers in its scope. GPS 340 sets insurance liability valuation requirements for general insurers and Level 2 insurance groups. The FW-9 pilot review is a project gate with its own scope. [APRA CPS 320](https://www.apra.gov.au/standards/cps-320) · [APRA GPS 340](https://www.apra.gov.au/standards/gps-340) · [Actuaries Institute general insurance standards](https://www.actuaries.asn.au/professional-standards-and-regulation/standards-guidance/general-insurance-standards-guidance)
+
+## [P1] Require independent validation for the live pilot release bundle
+
+- **Commission an independent review.** The risk bearer appoints a qualified general insurance actuary with no role in fitting or signing off the model. Record conflicts, scope, intended use, data access and the reporting route. Agree thresholds for validation tests, liquidity and shortfall risk with the risk bearer before examining the results. Use FW-1 for cash floors, obligations and backstop terms. [FW-1](fw-01-solvency-and-shortfall.md)
+- **Check data, reproducibility and calibration.** Trace exposure denominators and incurred loss to versioned source data. Check completeness, changes in coverage mix, claims development and relevance to the pilot. Reproduce a pinned reference run and reconcile payout and cash-flow outputs to the calculation manifest. Examine leakage-free time-based or event-based holdouts with frequency, severity and aggregate calibration diagnostics. If data is sparse, document limits, independently justified benchmarks and any exposure cap. [Plan 05 model quality checks](05-actuarial-engine-and-simulation.md#21-actuarial-model-quality-checks)
+- **Stress the pilot assumptions.** Run correlated claims, low enrolment, missed contributions, and delayed or unavailable backstop individually and in combination. Compare reserves, forecast cash, shortfall probability and due payouts against agreed limits. Record scenarios, results, uncertainty, limitations and each breached limit. [Plan 05 sensitivity analysis](05-actuarial-engine-and-simulation.md#12-monte-carlo-uncertainty-and-sensitivity-analysis)
+- **Require a signed decision before G8.** Attach the independent report, pinned calculation and release bundle IDs, source and run manifest references, signed limits, stress results and issue register to the legal readiness record. The independent actuary signs their findings. The risk bearer approves proposed limits and any non-material residual issues with a measure, owner and review date. Keep G8 blocked while material findings, failed binding limits or insufficient evidence remain unresolved. The legal specialist and platform admin record readiness under Plan 05.
+- **Revalidate on material change.** Trigger a scoped independent review when terms, exposure mix, reserve or pricing assumptions, model code, backstop or experienced losses materially change, or a signed monitoring limit is breached. Record the review scope, acceptability decision and evidence for the replacement release bundle. A reporting-only release may reference prior calculation evidence if the risk bearer confirms its scope still applies and fresh G6–G8 approvals are recorded.
+
+## Notes
+
+Pilot threshold values, calibration tests for the selected product and reviewer appointment remain with the risk bearer and actuary.
+
+Cursor `composer-2.5` approved P1 in round 1 on 26 November 2026. The review confirmed that the independent review follows G5, uses Plan 05's sensitivity inputs and attaches its evidence to the G8 legal readiness record for the applicable release bundle. No changes or disputes remain.
